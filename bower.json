@@ -1,0 +1,10 @@
+{
+  "name": "flask-todomvc",
+  "version": "0.0.0",
+  "dependencies": {
+    "backbone": "1.1.0",
+    "jquery": "2.0.3",
+    "todomvc-common": "0.1.9",
+    "underscore": "1.5.2"
+  }
+}
