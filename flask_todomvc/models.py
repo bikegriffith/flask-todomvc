@@ -5,6 +5,7 @@ from .extensions import db
 
 class Todo(db.Model):
     __tablename__ = 'todos'
+
     id = db.Column(db.Integer, primary_key=True)
     title = db.Column(db.String)
     order = db.Column(db.Integer)
@@ -33,6 +34,7 @@ roles_users = db.Table(
 
 class Role(db.Model, RoleMixin):
     __tablename__ = 'roles'
+
     id = db.Column(db.Integer, primary_key=True)
     name = db.Column(db.String, unique=True)
     description = db.Column(db.String)
@@ -40,10 +42,19 @@ class Role(db.Model, RoleMixin):
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
+
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String, unique=True)
     password = db.Column(db.String)
+    name = db.Column(db.String(255))
     active = db.Column(db.Boolean)
+    last_login_at = db.Column(db.DateTime())
+    current_login_at = db.Column(db.DateTime())
+    last_login_ip = db.Column(db.String(32))
+    current_login_ip = db.Column(db.String(32))
+    login_count = db.Column(db.Integer)
+
+
     roles = db.relationship(
         'Role', secondary=roles_users,
         backref=db.backref('users', lazy='dynamic'))

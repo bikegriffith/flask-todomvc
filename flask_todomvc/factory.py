@@ -6,6 +6,7 @@ from .extensions import db, security
 from .models import User, Role
 from .index import bp as index
 from .todos import bp as todos
+from .admin import register_admin
 
 from flask_security import SQLAlchemyUserDatastore
 from flask_security.utils import encrypt_password
@@ -24,6 +25,8 @@ def create_app(priority_settings=None):
 
     app.register_blueprint(index)
     app.register_blueprint(todos)
+
+    register_admin(app)
 
     with app.app_context():
         db.create_all()
