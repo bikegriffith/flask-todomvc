@@ -1,27 +1,25 @@
 # Flask TodoMVC
 
-[![Build Status](https://secure.travis-ci.org/kevinbeaty/flask-todomvc.png)](http://travis-ci.org/kevinbeaty/flask-todomvc)
+[![Build Status](https://secure.travis-ci.org/bikegriffith/flask-todomvc.png)](http://travis-ci.org/kevinbeaty/flask-todomvc)
 
-This is the code for Flask tutorial presented as a [series][5] of blog articles that creates a [Backbone.js][3] backend with [Flask][2] for the [TodoMVC][1] app.
+## Overview
 
-1. [Getting Started][5]
-2. [Server Side Backbone Sync][6]
-3. [Dataset Persistence][7]
-4. [Custom Configuration][8]
-5. [Testing Todo API][9]
-6. [SQLAlchemy Persistence][10]
-7. [User Login][11]
-7. [Modularization: Factories and Blueprints][11]
+This project is a fork from [kevinbeaty/flask-todomvc][1] based on his well written [tutorial][2] using Flask/SQLAlchemy/BackboneJS.
 
-[1]: http://todomvc.com
-[2]: http://flask.pocoo.org/
-[3]: http://backbonejs.org
-[4]: http://todomvc.com/architecture-examples/backbone/
-[5]: http://simplectic.com/blog/2014/flask-todomvc-part1/
-[6]: http://simplectic.com/blog/2014/flask-todomvc-backbone-sync/
-[7]: http://simplectic.com/blog/2014/flask-todomvc-dataset/
-[8]: http://simplectic.com/blog/2014/flask-todomvc-configuration/
-[9]: http://simplectic.com/blog/2014/flask-todomvc-testing/ 
-[10]: http://simplectic.com/blog/2014/flask-todomvc-sqlalchemy/
-[11]: http://simplectic.com/blog/2014/flask-todomvc-login/
-[12]: http://simplectic.com/blog/2014/flask-todomvc-modular/
+It establishes a few different patterns and adds features I think are important in a web app that will grow to moderate complexity.
+
+1. JS/CSS minification
+2. Database migrations
+3. Admin portal
+4. Separation of config for dev/test/stage/prod
+
+## Getting Started
+
+1. Clone repo
+2. Create a virtual environment and install requirements `virtualenv . && . bin/activate && pip install -r requirements.txt`
+3. Run tests `pip install nose && nosetests`
+4. Run dev server `python server.py`
+5. Log in using `me@example.com` : `password`
+
+[1]: https://github.com/kevinbeaty/flask-todomvc
+[2]: http://simplectic.com/blog/2014/flask-todomvc-part1/

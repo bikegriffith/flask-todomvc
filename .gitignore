@@ -1,3 +1,7 @@
+.Python
+bin
+include
+lib
+*.pyc
 *.swp
 *.db
-*.py[cod]
