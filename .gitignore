@@ -7,3 +7,4 @@ lib
 *.db
 .sass-cache
 node_modules
+man

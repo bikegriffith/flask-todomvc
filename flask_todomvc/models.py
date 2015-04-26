@@ -11,6 +11,9 @@ class Todo(db.Model):
     order = db.Column(db.Integer)
     completed = db.Column(db.Boolean)
 
+    def __unicode__(self):
+        return self.title
+
     def to_json(self):
         return {
             "id": self.id,
@@ -39,6 +42,9 @@ class Role(db.Model, RoleMixin):
     name = db.Column(db.String, unique=True)
     description = db.Column(db.String)
 
+    def __unicode__(self):
+        return self.description
+
 
 class User(db.Model, UserMixin):
     __tablename__ = 'users'
@@ -54,7 +60,9 @@ class User(db.Model, UserMixin):
     current_login_ip = db.Column(db.String(32))
     login_count = db.Column(db.Integer)
 
-
     roles = db.relationship(
         'Role', secondary=roles_users,
         backref=db.backref('users', lazy='dynamic'))
+
+    def __unicode__(self):
+        return self.email
