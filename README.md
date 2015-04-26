@@ -8,17 +8,17 @@ This project is a fork from [kevinbeaty/flask-todomvc][1] based on his well writ
 
 It establishes a few different patterns and adds features I think are important in a web app that will grow to moderate complexity.
 
-1. JS/CSS minification
-2. Database migrations
-3. Admin portal
-4. Separation of config for dev/test/stage/prod
+1. JS/CSS minification (DONE)
+2. Database migrations (NOT DONE)
+3. Admin portal (HALF DONE)
+4. Separation of config for dev/test/stage/prod (NOT DONE)
 
 ## Getting Started
 
 1. Clone repo
-2. Create a virtual environment and install requirements `virtualenv . && . bin/activate && pip install -r requirements.txt`
+2. Create a virtual environment and install requirements `virtualenv . && . bin/activate && pip install -r requirements.txt && npm install`
 3. Run tests `pip install nose && nosetests`
-4. Run dev server `python server.py`
+4. Run dev server `gulp`
 5. Log in using `me@example.com` : `password`
 
 [1]: https://github.com/kevinbeaty/flask-todomvc

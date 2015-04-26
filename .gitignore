@@ -5,3 +5,5 @@ lib
 *.pyc
 *.swp
 *.db
+.sass-cache
+node_modules
