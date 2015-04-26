@@ -1,6 +1,6 @@
 # Flask TodoMVC
 
-[![Build Status](https://secure.travis-ci.org/bikegriffith/flask-todomvc.png)](http://travis-ci.org/kevinbeaty/flask-todomvc)
+[![Build Status](https://secure.travis-ci.org/bikegriffith/flask-todomvc.png)](http://travis-ci.org/bikegriffith/flask-todomvc)
 
 ## Overview
 
